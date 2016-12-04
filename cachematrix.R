@@ -8,8 +8,8 @@ makeCacheMatrix <- function(x = matrix()) {            # Defines function with m
   invrs <- NULL                                        # Set initail value of inverse matrix as null
   
   set <- function(y) {                                 # Defines a function to set new matrix 
-    x <<- y                                          # Superassigment of value in global enviroment
-    invrs <<- NULL                                   # Sets inverse matrix to null for a new matrix
+    x <<- y                                            # Superassigment of value in global enviroment
+    invrs <<- NULL                                     # Sets inverse matrix to null for a new matrix
   }
   
   
@@ -29,7 +29,7 @@ cacheSolve <- function(x, ...) {                       # Function to to calacula
   
   if(!is.null(invrs)) {                                # Check if inverse matrix exsits in cache
     message("getting cached data")
-    return(invrs)                                    # Gets inverse matrix from Cache
+    return(invrs)                                      # Gets inverse matrix from Cache
   }
   # Caluating invser if it is not in Cache
   data <- x$get()                                      # Getting cached special matrix
